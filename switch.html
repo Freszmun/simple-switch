@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Switch</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="https: //mateuszbilicz.pl/">
+    <meta name="description" content="Simple switch element">
+    <!-- Switch element -->
+    <script src="switch.js"></script>
+    <!-- END -->
+</head>
+<body>
+    <app-switch></app-switch>
+    <label style="font-size: 1.2em; font-family: Arial; text-align: left">test #1</label><br>
+
+    <app-switch value="false"></app-switch>
+    <label style="font-size: 1.2em; font-family: Arial; text-align: left">test #2</label><br>
+
+    <app-switch value="true"></app-switch>
+    <label style="font-size: 1.2em; font-family: Arial; text-align: left">test #3</label><br>
+
+    <app-switch style="--value-false-color: #f00;--value-true-color: #0f0"></app-switch>
+    <label style="font-size: 1.2em; font-family: Arial; text-align: left">Changed border & primary color</label><br>
+
+    <span style="font-size: 2em">
+        <app-switch style="float: left"></app-switch><label style="font-size: 1.2em; font-family: Arial; text-align: left">Changed font-size</label>
+    </span>
+
+    <br>
+
+    <!-------------------------------------->
+    <app-switch style="--value-false-color: #f00"></app-switch>
+    <app-switch style="--value-true-color: #0f0"></app-switch>
+    <app-switch style="--value-false-color: #f00;--value-true-color: #0f0"></app-switch>
+    <app-switch style="float: left" value="true"></app-switch>
+    <app-switch style="float: right; font-size: 2em"></app-switch><br>
+    <app-switch style="font-size: 2cm" id="switch-test-last"></app-switch>
+    <script>
+        document.getElementById('switch-test-last').addEventListener('click', function( ev ) {
+            setTimeout( ()=> {
+                alert('Last switch value: ' + ev.target.value);
+            }, 320);
+        })
+    </script>
+
+</body>
+</html>
